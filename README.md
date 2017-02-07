@@ -1,2 +1,6 @@
-# mura7-feedapi-orm-presentation
-Mura 7 ORM and FeedAPI Presentation written for MuraCon 2017
+# mura7-presentations
+Slide decks and sample code for my MuraCon 2017 presentations.
+
+MuraORM + FeedAPI = Awesomeness
+
+Infinite Scrolling With Mura 7
