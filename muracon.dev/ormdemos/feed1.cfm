@@ -6,10 +6,10 @@
 
 
 	musician = $.getBean( "Musician" ).getFeed().addParam( field = "Name",
-																	criteria = "David",
-																	condition = "contains",
-																	relationship = "and"
-																 ).getQuery();
+														   criteria = "David",
+														   condition = "contains",
+														   relationship = "and"
+														 ).getQuery();
 
 	WriteDump( musician );
 
