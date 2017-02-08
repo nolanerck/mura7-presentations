@@ -4,7 +4,7 @@
 
 	// These would normally go in some sort of onApplicationLoad or onSiteStart event handler...
 	$.getServiceFactory().declareBean( beanName='Musician', 
-									   dottedPath='ormdemos.Musician', 
+									   dottedPath='ormdemos.model.Musician', 
 									   isSingleton=false );
 	$.getBean( 'Musician' ).checkSchema(); // if the Musician object's DB table hasn't been created, do so now...
 
