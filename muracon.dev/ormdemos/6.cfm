@@ -5,12 +5,12 @@
 	$ = application.serviceFactory.getBean( "muraScope" ).init( "default" );
 
 
-	musicianIterator = $.getBean( "Musician" ).getFeed().addParam( field = "Name",
+	musician = $.getBean( "Musician" ).getFeed().addParam( field = "Name",
 																	criteria = "David",
 																	condition = "contains",
 																	relationship = "and"
 																 ).getQuery();
 
-	WriteDump( musicianIterator );
+	WriteDump( musician );
 
 </cfscript>
