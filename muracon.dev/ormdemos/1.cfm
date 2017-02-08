@@ -3,11 +3,13 @@
 	$ = application.serviceFactory.getBean( "muraScope" ).init( "default" );
 
 	// These would normally go in some sort of onApplicationLoad or onSiteStart event handler...
-	$.getServiceFactory().declareBean( beanName='Musician', dottedPath='ormdemos.Musician', isSingleton=false );
+	$.getServiceFactory().declareBean( beanName='Musician', 
+									   dottedPath='ormdemos.Musician', 
+									   isSingleton=false );
 	$.getBean( 'Musician' ).checkSchema(); // if the Musician object's DB table hasn't been created, do so now...
 
 
-	/* Here's the Real World Stuff.... */
+	/* Here's the Real World Stuff...kind of... */
 
 	objMusician = $.getBean( "Musician" );
 
@@ -15,7 +17,5 @@
 	objMusician.setAge( 70 );
 
 	objMusician.save();
-
-	WriteDump( objMusician );
 
 </cfscript>
