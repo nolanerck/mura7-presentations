@@ -6,8 +6,8 @@
 <cfparam name="objectParams.articleSortByDirection" default="DESC" />
 <cfparam name="objectParams.currentPage" default="1" type="numeric" />
 
-<cfset songSvc = $.getBean( "SongService" ) />
 
+<cfset songSvc = $.getBean( "SongService" ) />
 
 <cfset args = {
 				$ = $,
@@ -21,13 +21,23 @@
 <cfset songIterator.setNextN( objectParams.songCountPerPage ) />
 <cfset songIterator.setPage( objectParams.currentPage ) />
 
+<!--- get the total number of pages we can scroll thru. --->
+<cfset objectParams.numberOfPages = Ceiling( songIterator.getrecordCount() / objectParams.songCountPerPage )>
+
 <cfoutput>
-	<cfloop condition="songIterator.hasNext()">
-		<cfset song = songIterator.next() />
+	<div class="container">
+		<cfloop condition="songIterator.hasNext()">
+			<cfset song = songIterator.next() />
 
-		#song.getTitle()#<br />
+			<div class="panel panel-primary">
+			  <div class="panel-heading">#song.getTitle()#</div>
+			  <div class="panel-body">
+			    #song.getSummary()#
+			  </div>
+			</div>
 
-	</cfloop>
+		</cfloop>
+	</div>
 </cfoutput>
 
 
