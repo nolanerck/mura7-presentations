@@ -58,7 +58,66 @@
 					</ul>
 				</section>
 
-				
+				<section>
+					<h2>Content Types</h2>
+					<ul>
+						<li>Custom layout markup for subtypes</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Models</h2>
+					<ul>
+						<li>Reusble CFCs to store business logic</li>
+						<li>Same as "models" or "service layers" in any OO app</li>
+						<li>/models folder at site, theme, display_object or plugin level</li>
+						<li>CFCs get auto-wired by Mura</li>
+						<li>$.getBean( "your CFC name" )</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Display Objects</h2>
+					<ul>
+						<li>display_objects folder</li>
+						<li>site, theme and plugin level</li>
+						<li>needs index.cfm</li>
+						<li>config.xml.cfm to make it drag/droppable
+							<ul>
+								<li>configurator.cfm to pass options into objectParams</li>
+							</ul>
+						</li>
+						<li>Can have their own /model folder for Services</li>
+						<li>objectParams struct for passing in arguments
+							<ul>
+								<li>Like "attributes" for a Custom Tag</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<div class="mura-object"> when rendering a display object
+				[SCREEN SHOTS?]
+
+				<section>
+					<h2>m() scope</h2>
+					<ul>
+						<li>Same as $() but on the client side</li>
+						<li>Replacement for jQuery</li>
+						<li>Does some same things as jQuery</li>
+						<li>select DOM elements, register events (onclick, onsubmit, etc)</li>
+						<li>Mura core uses this instead of jQuery</li>
+						<li>But you can still add jQuery on your site too</li>
+						<li>Can mix and match m() and jQuery</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>m() scope (cont)</h2>
+					<ul>
+						<li>Includes functions for maniuplating Display Objects</li>
+					</ul>
+				</section>
 
 			</div>
 
