@@ -170,12 +170,10 @@
 					<h2>What's the catch with Feed API?</h2>
 					<ul>
 						<li>Remember maxItems( 0 ) to get back all records</li>
-						<li>Builds upon Mura ORM
+						<li>Builds upon Mura ORM, same behavior/performance
 							<ul>
-								<li>Same behavior/performance "concerns"</li>
-								<li>Select * on all the queries</li>
+								<li>Select * from table</li>
 								<li>But you're no longer writing SQL!</li>
-								<li>Less code, less SQL, fewer bugs</li>
 								<li>If performance is truly an issue
 									<ul>
 										<li>Run a profiler, find the REAL problem</li>
