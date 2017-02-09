@@ -11,5 +11,6 @@
 	<li><a href="feed1.cfm">feed 1</a></li>
 	<li><a href="feed2.cfm">feed 2</a></li>
 	<li><a href="feed3.cfm">feed 3</a></li>
+	<li><a href="feed3.1.cfm">feed 3.1</a></li>
 	<li><a href="feed4.cfm">feed 4</a></li>
 </ul>

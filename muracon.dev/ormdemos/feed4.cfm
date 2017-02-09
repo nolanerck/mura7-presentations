@@ -1,5 +1,5 @@
 <cfscript>
-	// Using the NEW AND IMPROVED FEED API syntax to return multiple records...
+	// Mura 7 Feed API
 
 	// because I'm not in a Mura page, we need access to the $ scope
 	$ = application.serviceFactory.getBean( "muraScope" ).init( "default" );
