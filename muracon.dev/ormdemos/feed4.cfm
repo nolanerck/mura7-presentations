@@ -6,7 +6,13 @@
 
 	// okay, NOW we can search for any "The " bands...
 	// AND that were formed after 1976
-	rbIterator = $.getBean( "RockBand" ).getFeed().where().prop( "BandName" ).containsValue( "The " ).andProp( "YearFormed" ).isGTE( 1976 ).getIterator();
+	rbIterator = $.getBean( "RockBand" ).getFeed()
+										.where()
+										.prop( "BandName" )
+										.containsValue( "The " )
+										.andProp( "YearFormed" )
+										.isGTE( 1976 )
+										.getIterator();
 
 	while( rbIterator.hasNext() )
 	{

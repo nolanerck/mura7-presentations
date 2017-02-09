@@ -33,6 +33,9 @@
 	ath1.setSportsTeam( team1 );
 	ath1.save();
 
-
-
 </cfscript>
+
+<cfoutput>
+	<p>Player Name: #ath1.getAthleteName()#</p>
+	<p>His/Her Team: #ath1.getSportsTeam().getTeamName()#</p>
+</cfoutput>
