@@ -122,7 +122,7 @@
 					<ul>
 						<li>Much easier syntax</li>
 						<li>Less verbose</li>
-						<li>Read like plain English</li>
+						<li>Reads like plain English, not terse code</li>
 						<li>Similar to OO, jQuery, etc</li>
 					</ul>
 				</section>
@@ -132,6 +132,14 @@
 					<ul>
 						<li>use maxItems( 0 ) to get all records</li>
 						<li>Ties into MXP: sort( 'mxpRelevance' )</li>
+						<li>Use getQuery() for CFQuery return type</li>
+						<li>Use getIterator() to get Mura Beans
+							<ul>
+								<li>Page: getTitle(), getSummary()</li>
+								<li>Also returns extended attributes, categories, other related Mura items</li>
+								<li>With no extra work on your end</li>
+							</ul>
+						</li>
 					</ul>
 				</section>				
 
