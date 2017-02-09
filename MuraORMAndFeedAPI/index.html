@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>MuraORM + Feed API = Awesomeness</title>
+		<title>Mura ORM + Feed API = Awesomeness</title>
 
 		<link rel="stylesheet" href="../Reveal.js/css/reveal.css">
 		<link rel="stylesheet" href="../Reveal.js/css/theme/moon.css" id="theme">
@@ -52,7 +52,7 @@
 					<ul>
 						<li>What is ORM?</li>
 						<li>Why use ORM?</li>
-						<li>MuraORM in action</li>
+						<li>Mura ORM in action</li>
 						<li>What is the Feed API?</li>
 						<li>Feed API in action</li>
 						<li>Other resources</li>
@@ -89,7 +89,7 @@
 						<li>You write objects, objects write the SQL for you</li>
 						<li>Not specific to Mura or even ColdFusion
 							<ul>
-								<li>MuraORM = Mura</li>
+								<li>Mura ORM = Mura</li>
 						        <li>CF ORM = ColdFusion</li>
 						        <li>Hibernate = Java</li>
 						        <li>Entity Framework = C#</li>
@@ -104,12 +104,13 @@
 				</section>
 
 				<section>
-					<h2>What's the catch w/ MuraORM?</h2>
+					<h2>What's the catch with ORM?</h2>
 					<ul>
 						<li>Different way of thinking</li>
 						<li>Debugging is different</li>
 						<li>Can't run queries in SQL IDE</li>
 						<li>Everything is "select * from table"</li>
+						<li>(Same problems with any ORM library, not specific to Mura ORM)</li>
 					</ul>
 				</section>
 
@@ -130,16 +131,16 @@
 				<section>
 					<h2>Other Feed API tips</h2>
 					<ul>
-						<li>use maxItems( 0 ) to get all records</li>
-						<li>Ties into MXP: sort( 'mxpRelevance' )</li>
-						<li>Use getQuery() for CFQuery return type</li>
-						<li>Use getIterator() to get Mura Beans
+						<li>maxItems( 0 ) to get all records</li>
+						<li>getQuery() for CFQuery return type</li>
+						<li>getIterator() to get Mura Beans
 							<ul>
 								<li>Page: getTitle(), getSummary()</li>
 								<li>Also returns extended attributes, categories, other related Mura items</li>
 								<li>With no extra work on your end</li>
 							</ul>
 						</li>
+						<li>Ties into MXP: sort( 'mxpRelevance' )</li>
 					</ul>
 				</section>				
 
