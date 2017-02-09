@@ -4,20 +4,44 @@
 	// because I'm not in a Mura page, we need access to the $ scope
 	$ = application.serviceFactory.getBean( "muraScope" ).init( "muracon" );
 
-	qryContentWithNoAuthor = $.getBean( 'contentBean' )
+	contentIterator = $.getBean( 'contentBean' )
 								.getFeed( "content" )
 								.where().prop( 'credits' )
 								.isEQ( "null" )
-								.maxItems( 0 ).getQuery();
+								.setMaxItems( 0 ).getIterator();
 </cfscript>
 
 <cfoutput>
-	<h2>Pages With No Author (#qryContentWithNoAuthor.recordCount# pages):</h2>
+	<h2>Pages With No Author (#contentIterator.getRecordCount()# pages):</h2>
 
 	<ul>
-		<cfloop query="qryContentWithNoAuthor">
-			<li>#qryContentWithNoAuthor.Title#</li>
+		<cfloop condition="contentIterator.hasNext()">
+			<cfset page = contentIterator.next() />
+			<li>#page.getTitle()#</li>
 		</cfloop>
 	</ul>
+</cfoutput>
 
+<!--- Now let's fix that... --->
+
+<cfscript>
+	contentIterator.reset(); // restart the iterator at the beginning.
+
+	while( contentIterator.hasNext() )
+	{
+		page = contentIterator.next();
+		page.setCredits( "Associated Staff" );
+		page.save();
+	}
+</cfscript>
+
+<cfoutput>
+	<h2>Pages With No Author After Processing:</h2>
+
+	<ul>
+		<cfloop condition="contentIterator.hasNext()">
+			<cfset page = contentIterator.next() />
+			<li>#page.getTitle()#</li>
+		</cfloop>
+	</ul>
 </cfoutput>
