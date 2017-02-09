@@ -6,7 +6,10 @@
 
 	// okay, NOW we can search for any "The " bands...
 	// AND that were formed after 1976
-	iterator = $.getBean( "Musician" ).getFeed().where().prop( "Name" ).isEQ( "Les Claypool" ).getIterator();
+	iterator = $.getBean( "Musician" ).getFeed().where()
+				.prop( "Name" )
+				.isEQ( "Les Claypool" )
+				.getIterator();
 	/* I dunno about you but stacking multiple addParam() calls starts
 	   getting pretty verbose. There's gotta be a better way! */
 

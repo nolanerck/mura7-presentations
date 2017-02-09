@@ -1,5 +1,5 @@
 <cfoutput>
-	<footer class="footer-wrapper">
+	<footer class="footer-wrapper" id="js-footer-wrapper">
 		<div class="container">
 			<div class="row footer-top">
 				<div class="col-md-3">

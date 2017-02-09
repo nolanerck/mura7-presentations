@@ -8,7 +8,7 @@
 								.getFeed( "content" )
 								.where().prop( 'fileid' )
 								.isEQ( "null" )
-								//.sort( "Title", "ASC" )
+								.sort( "Title", "ASC" )
 								.maxItems( 0 ).getQuery();
 </cfscript>
 

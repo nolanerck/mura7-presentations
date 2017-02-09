@@ -10,9 +10,9 @@
 									   isSingleton=false );
 	$.getBean( 'RockBand' ).checkSchema(); // if the RockBand object's DB table hasn't been created, do so now...
 
-
+/*
 	// first, let's put several records in the table...
-/*	rb1 = $.getBean( "RockBand" );
+	rb1 = $.getBean( "RockBand" );
 	rb1.setBandName( "The Cure" );
 	rb1.setYearFormed( 1977 );
 	rb1.save();
