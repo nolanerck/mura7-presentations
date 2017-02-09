@@ -30,6 +30,37 @@
 			}
 		}
 
+		windowScroll_handler = function()
+		{		
+			// End of the document reached?			
+			var heightOfFooter = $( "#js-intuit-footer" ).height();
+			
+			//if( $(document).height() - win.height() == win.scrollTop() )
+			if( $(document).height() - win.height() - heightOfFooter - 100 <= win.scrollTop() )
+			{				
+				if( bInfiniteScroll )
+				{
+					win.off( "scroll", windowScroll_handler );				
+					
+					// for pages 2 and beyond we need to actually do the fancy infinite scrolling logic.
+					var data = m( "#article-container .mura-object:last-child" ).data();
+
+					if( data.currentpage < data.numberofpages )
+					{
+						currentPage = currentPage + 1;
+
+						m.extend( data, { articleCountPerPage : 18, // infinite scroll *always* scrolls in chunks of 18, regardless of if user clicked the "60" link earlier.
+										  currentPage : currentPage,
+										  bInfiniteScroll : true } );
+
+						m( "#article-container" ).appendDisplayObject( data ).then( function(){ eqjs.all(); win.on( "scroll", windowScroll_handler ); } );
+					}
+				}
+			}
+		};
+
+
+
 		// reference to the actual "thing" (display object) that we're passing data to
 		var pSongListing = m( "#song-container .mura-object" );
 
