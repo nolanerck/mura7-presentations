@@ -21,4 +21,6 @@
 <ul>
 	<li><a href="report_numOfPages.cfm">How many pages do we have on our site?</a></li>
 	<li><a href="report_missingAssocImgs.cfm">Which pages are missing an associated image?</a>
+	<li><a href="report_pagesByAuthor.cfm">Pages by Author</a></li>
+	<li><a href="report_creditAsAssocStaff.cfm">Any pages that don't have an author, set to "Associated Staff"</a></li>
 </ul>

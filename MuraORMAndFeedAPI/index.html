@@ -8,6 +8,9 @@
 
 		<link rel="stylesheet" href="../Reveal.js/css/reveal.css">
 		<link rel="stylesheet" href="../Reveal.js/css/theme/moon.css" id="theme">
+		<style>
+			.reveal h2 { text-transform: none; }
+		</style>
 	</head>
 
 	<body>
@@ -129,20 +132,72 @@
 				</section>
 
 				<section>
-					<h2>Other Feed API tips</h2>
+					<h2>Code Time!</h2>
+				</section>
+
+				<section>
+					<h2>Other Feed API Tips</h2>
 					<ul>
-						<li>maxItems( 0 ) to get all records</li>
-						<li>getQuery() for CFQuery return type</li>
+						<li>getQuery() for CFQuery return type
+							<ul>
+								<li>maxItems( 0 ) to get all records</li>
+							</ul>
+						</li>
 						<li>getIterator() to get Mura Beans
 							<ul>
 								<li>Page: getTitle(), getSummary()</li>
 								<li>Also returns extended attributes, categories, other related Mura items</li>
 								<li>With no extra work on your end</li>
+								<li>setNextN() instead of maxItems() to return all records</li>
 							</ul>
 						</li>
-						<li>Ties into MXP: sort( 'mxpRelevance' )</li>
 					</ul>
-				</section>				
+				</section>
+
+				<section>
+					<h2>Other Feed API Tips</h2>
+					<ul>
+						<li>Ties into MXP: sort( 'mxpRelevance' )</li>
+						<li>Client-side option also available via JavaScript
+							<ul>
+								<li>JSON API & Mura ORM Via The Magic Of DataTables, Grant Shepert</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>What's the catch with Feed API?</h2>
+					<ul>
+						<li>Remember maxItems( 0 ) to get back all records</li>
+						<li>Builds upon Mura ORM
+							<ul>
+								<li>Same behavior/performance "concerns"</li>
+								<li>Select * on all the queries</li>
+								<li>But you're no longer writing SQL!</li>
+								<li>Less code, less SQL, fewer bugs</li>
+								<li>If performance is truly an issue
+									<ul>
+										<li>Run a profiler, find the REAL problem</li>
+										<li>Caching options in CF/Lucee and Mura</li>
+										<li>Can mix and match ORM + real SQL if need be</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Questions? Comments?</h2>
+					<ul>
+						<li>southofshasta.com</li>
+						<li>nolan@southofshasta.com</li>
+						<li>Twitter: @southofshasta</li>
+						<li>Github: nolanerck</li>
+					</ul>
+					<p>Thanks!</p>
+				</section>
 
 			</div>
 
