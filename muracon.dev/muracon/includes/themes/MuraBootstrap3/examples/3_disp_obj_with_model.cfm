@@ -1,5 +1,5 @@
 <cfoutput>
-	<div class="punk-band-width-wrapper">
+	<div class="punk-band-wrapper">
 		#$.dspObject( object='punk_band_generator' )#
 	</div>
 </cfoutput>
