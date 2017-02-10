@@ -80,8 +80,7 @@
 					<ul>
 						<li>They live in the dislay_objects folder</li>
 						<li>Site, theme and plugin level</li>
-						<li>Needs index.cfm</li>
-						<li>and config.xml.cfm to make visible to Mura</li>
+						<li>Needs index.cfm and config.xml.cfm to be loaded in Mura</li>
 						<li>Usage: <code>#dspObject(...)#</code></li>
 						<li>Example 1: Your First Display Object</li>
 					</ul>
@@ -137,7 +136,7 @@
 					<h2>Mura.js (cont)</h2>
 					<ul>
 						<li>m() - Same as Mura $ scope but client side</li>
-						<li>Mura core uses m() instead of jQuery</li>
+						<li>Mura core uses Mura.js instead of jQuery</li>
 						<li>Can still add jQuery on your site too</li>
 						<li>Can mix and match m() and jQuery</li>
 						<li>Includes functions for maniuplating Display Objects on the client-side.</li>
@@ -157,7 +156,7 @@
 				<section>
 					<h2>Useful Mura.js methods</h2>
 					<ul>
-						<li>extend() - clone an existing Display Object and make a new instance of it</li>
+						<li>extend() - clone an existing Display Object metadata and make a new instance of it</li>
 						<li>Use data() to copy data from the previous Display Object, then add/update properties in the new instance</li>
 						<li>Example 5: Mura.js Extend Data</li>
 					</ul>
@@ -165,6 +164,7 @@
 
 				<section>
 					<h2>Putting It All Together</h2>
+					<p>Infinite Scrolling Demo</p>
 				</section>
 
 				<section>
