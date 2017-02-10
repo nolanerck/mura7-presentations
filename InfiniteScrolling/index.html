@@ -100,18 +100,16 @@
 					<h2>Display Objects</h2>
 					<ul>
 						<!-- <li>configurator.cfm to pass options into objectParams</li> -->
-						<li>objectParams struct for passing in arguments
-							<ul>
-								<li>Like "attributes" for a Custom Tag</li>
-							</ul>
-						</li>						
-						<li>Can have their own /model folder for Services (more on that later)</li>
+						<li>objectParams struct for passing in arguments</li>
+						<li>Like "attributes" for a Custom Tag</li>
+						<li>Any objectParams items become data attributes in the &lt;div class="mura-object"&gt; wrapper</li>
 					</ul>
 				</section>
 
 				<section>
 					<h2>Services / Models</h2>
 					<ul>
+						<li>Can have their own /model folder for Services (more on that later)</li>					
 						<li>Reusble CFCs to store business logic</li>
 						<li>Same as "models" or "service layers" in any OO app</li>
 						<li>/models folder at site, theme, display_object or plugin level</li>
