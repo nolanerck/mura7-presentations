@@ -85,6 +85,7 @@
 
 		// preloader markup for async objects
 		this.preloaderMarkup='<i class="mura-preloader fa fa-refresh fa-spin"></i>';
+		//this.preloaderMarkup='<strong>please wait...</strong>';
 
 		// nav and list item vars
 		this.navWrapperClass = this.generalWrapperClass;
