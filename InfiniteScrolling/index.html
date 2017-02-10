@@ -4,10 +4,13 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - Barebones</title>
+		<title>Infinite Scrolling With Mura 7</title>
 
 		<link rel="stylesheet" href="../Reveal.js/css/reveal.css">
 		<link rel="stylesheet" href="../Reveal.js/css/theme/moon.css" id="theme">
+		<style>
+			.reveal h2 { text-transform: none; }
+		</style>		
 	</head>
 
 	<body>
@@ -50,29 +53,11 @@
 				<section>
 					<h2>Today's Agenda</h2>
 					<ul>
-						<li>Content Types</li>
 						<li>Display Objects</li>
-						<li>Services</li>
+						<li>Content Types</li>
+						<li>Services / Models</li>
 						<li>The new m() scope</li>
 						<li>Putting It All Together</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Content Types</h2>
-					<ul>
-						<li>Custom layout markup for subtypes</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Models</h2>
-					<ul>
-						<li>Reusble CFCs to store business logic</li>
-						<li>Same as "models" or "service layers" in any OO app</li>
-						<li>/models folder at site, theme, display_object or plugin level</li>
-						<li>CFCs get auto-wired by Mura</li>
-						<li>$.getBean( "your CFC name" )</li>
 					</ul>
 				</section>
 
@@ -95,6 +80,25 @@
 						</li>
 					</ul>
 				</section>
+
+				<section>
+					<h2>Content Types</h2>
+					<ul>
+						<li>Custom layout markup for subtypes</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Services / Models</h2>
+					<ul>
+						<li>Reusble CFCs to store business logic</li>
+						<li>Same as "models" or "service layers" in any OO app</li>
+						<li>/models folder at site, theme, display_object or plugin level</li>
+						<li>CFCs get auto-wired by Mura</li>
+						<li>$.getBean( "your CFC name" )</li>
+					</ul>
+				</section>
+
 
 <!--				<div class="mura-object"> when rendering a display object
 				[SCREEN SHOTS?]
