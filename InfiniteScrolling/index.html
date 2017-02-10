@@ -53,8 +53,8 @@
 				<section>
 					<h2>Today's Agenda</h2>
 					<ul>
-						<li>Display Objects</li>
 						<li>Content Types</li>
+						<li>Display Objects</li>
 						<li>Services / Models</li>
 						<li>The new m() scope</li>
 						<li>Putting It All Together</li>
@@ -64,17 +64,27 @@
 				</section>
 
 				<section>
+					<h2>Content Types</h2>
+					<ul>
+						<li>Custom layout markup for subtypes</li>
+					</ul>
+				</section>
+
+
+				<section>
 					<h2>Display Objects</h2>
 					<ul>
 						<li>They live in the dislay_objects folder</li>
 						<li>Site, theme and plugin level</li>
-						<li>Usage:<br />#dspObject( 'display object name' )#</li>
+						<li>Needs index.cfm</li>
+						<li>and config.xml.cfm to make visible to Mura</li>
+						<li>Usage:<br />#dspObject( 'display object name' )#</li>						
 					</ul>
 				</section>
 
 				<section>
 					<h2>Display Objects</h2>
-					<p>Content of your Display Object gets wrapped with:<br />
+					<p>Content of your Display Object gets wrapped with markup:<br />
 <pre>
 <code>
 &lt;div class="mura-object"&gt;
@@ -82,34 +92,20 @@
 &lt;/div&gt;
 </code>
 </pre>
-						
 					</p>
+					<p>We can use that as a "hook" to manipulate the Display Object via JavaScript (more on that later).</p>
 				</section>
 
 				<section>
 					<h2>Display Objects</h2>
 					<ul>
-						<li>display_objects folder</li>
-						<li>site, theme and plugin level</li>
-						<li>needs index.cfm</li>
-						<li>config.xml.cfm to make visible to Mura
-							<ul>
-								<li>configurator.cfm to pass options into objectParams</li>
-							</ul>
-						</li>
+						<li>configurator.cfm to pass options into objectParams</li>
 						<li>Can have their own /model folder for Services</li>
 						<li>objectParams struct for passing in arguments
 							<ul>
 								<li>Like "attributes" for a Custom Tag</li>
 							</ul>
 						</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Content Types</h2>
-					<ul>
-						<li>Custom layout markup for subtypes</li>
 					</ul>
 				</section>
 
