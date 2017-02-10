@@ -66,10 +66,33 @@
 				<section>
 					<h2>Display Objects</h2>
 					<ul>
+						<li>They live in the dislay_objects folder</li>
+						<li>Site, theme and plugin level</li>
+						<li>Usage:<br />#dspObject( 'display object name' )#</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Display Objects</h2>
+					<p>Content of your Display Object gets wrapped with:<br />
+<pre>
+<code>
+&lt;div class="mura-object"&gt;
+	&lt;p&gt;This is my first Display Object.&lt;/p&gt;
+&lt;/div&gt;
+</code>
+</pre>
+						
+					</p>
+				</section>
+
+				<section>
+					<h2>Display Objects</h2>
+					<ul>
 						<li>display_objects folder</li>
 						<li>site, theme and plugin level</li>
 						<li>needs index.cfm</li>
-						<li>config.xml.cfm to make it drag/droppable
+						<li>config.xml.cfm to make visible to Mura
 							<ul>
 								<li>configurator.cfm to pass options into objectParams</li>
 							</ul>
@@ -122,6 +145,18 @@
 					<h2>m() scope (cont)</h2>
 					<ul>
 						<li>Includes functions for maniuplating Display Objects</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Real World Example!</h2>
+					<ul>
+						<li>FirmOfTheFuture.com</li>
+						<li>Uses all the concepts we just talked about.</li>
+						<li>Display Object for sub-topic pages</li>
+						<li>View All link turns on infinite scrolling</li>
+						<li>Exact same JavaScript in our example scroller</li>
+						<li>I wrote that. :)</li>
 					</ul>
 				</section>
 
