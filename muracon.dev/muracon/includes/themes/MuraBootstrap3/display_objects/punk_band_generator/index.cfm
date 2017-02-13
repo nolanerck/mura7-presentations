@@ -1,4 +1,4 @@
-<cfset objBandService = getBean( "PunkBandService" ) />
+<cfset objBandService = $.getBean( "PunkBandService" ) />
 <cfset strBandName = objBandService.getRandomPunkBand() />
 
 <cfoutput>
